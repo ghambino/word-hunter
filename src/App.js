@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Switch } from '@material-ui/core';
 import axios from 'axios';
+import { useDebounce } from 'use-debounce/lib';
 import './App.css';
 import Header from './components/Header/Header';
 import ResultBody from './components/ResultBody/ResultBody';
@@ -11,19 +12,20 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("en")
   const [lightMode, setLightMode] = useState(false);
 
-  
+  const [value] = useDebounce(word, 1000)
+  console.log(value)
 
    useEffect(() => {
     const handleUserRequest = async() => {
         try{
-          const result = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${selectedCategory}/${word}`)
+          const result = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${selectedCategory}/${value}`)
           setWordMeanings(result.data)
          }catch(error){
            console.log(error)
          }
     };
     handleUserRequest();
-   }, [word, selectedCategory])
+   }, [value, selectedCategory])
 
 
    const handleChange = () => {
