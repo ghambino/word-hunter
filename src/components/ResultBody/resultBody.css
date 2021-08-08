@@ -1,0 +1,25 @@
+.wordMeanings {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 5px solid grey;
+    border-radius: 5px;
+    padding: 5px 5px;
+    scrollbar-width: thin;
+}
+.subTitle {
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.single {
+     padding: 5px 10px;
+     display: flex;
+     flex-direction: column;
+     margin: 5px 5px;
+     border-radius: 10px;
+}
+.audio {
+    width: 100%;
+    color: black
+}

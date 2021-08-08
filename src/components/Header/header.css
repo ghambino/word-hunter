@@ -1,0 +1,35 @@
+.header {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.searchField {
+    width: 43%;
+}
+.selectField {
+    width: 43%;
+}
+
+@media (max-width: 900px) {
+    .title {
+        font-size: 6vw;
+    }
+    .lightSpan {
+        font-size: 3vw;
+    }
+}
