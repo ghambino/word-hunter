@@ -20,6 +20,7 @@
      border-radius: 10px;
 }
 .audio {
-    width: 100%;
-    color: black
+   width: 100%;
+   background-color: black;
+   border-radius: 10px;
 }

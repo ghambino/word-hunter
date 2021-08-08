@@ -19,7 +19,7 @@ function ResultBody({ wordMeanings, word, category, lightMode }) {
                 <span className="subTitle" style={{color: lightMode ? "black" : "white"}}>Start by typing a word into the searchBox</span>
             ) : (
                 wordMeanings.map((options) => options.meanings.map((item) => item.definitions.map((unit) => (
-                    <div className="single" style={{backgroundColor: lightMode ? "black" : "white", color: lightMode ? "white" : "black"}}> 
+                    <div className="single" style={{backgroundColor: lightMode ? "#282c34" : "white", color: lightMode ? "white" : "black"}}> 
                         <span>
                             <span style={{color: "blue", fontWeight: "700"}}>Definition : </span>
                             <b> {unit.definition} </b>
