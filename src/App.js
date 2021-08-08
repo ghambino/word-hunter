@@ -12,7 +12,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("en")
   const [lightMode, setLightMode] = useState(false);
 
-  const [value] = useDebounce(word, 3000)
+  const [value] = useDebounce(word, 1000)
   console.log(value)
 
    useEffect(() => {
